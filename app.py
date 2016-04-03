@@ -5,11 +5,11 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-class Frequency(Resource):
+class HelloWorld(Resource):
     def get(self):
-        return {'hello': 'world'}
+        return {'hello': frequency}
 
-api.add_resource(Frequency, '/<int:frequency>')
+api.add_resource(HelloWorld, '/<frequency>')
 
 # @app.route("/")
 # def home():
