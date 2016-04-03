@@ -12,12 +12,15 @@ class Magic(Resource):
         return {user_id: users[user_id]}
 
     def put(self, user_id):
-        users[user_id]['frequency'] = request.form['f']
-        users[user_id]['genre'] = request.form['g']
-        users[user_id]['demographics'] = request.form['d']
-        users[user_id]['sound_file'] = request.form['s']
+        users[user_id][0] = request.form['f'] # 'frequency'
+        users[user_id][1] = request.form['g'] # 'genre'
+        users[user_id][2] = request.form['d'] # 'demographics'
+        users[user_id][3] = request.form['s'] # 'sound_file'
 
-        return users#{user_id: users[user_id]}
+        return {user_id: hello[user_id][0],
+                user_id: hello[user_id][1],
+                user_id: hello[user_id][2],
+                user_id: hello[user_id][3]}#{user_id: users[user_id]}
 
 api.add_resource(Magic, '/<user_id>')
 
