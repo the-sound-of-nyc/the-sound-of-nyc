@@ -7,9 +7,9 @@ api = Api(app)
 
 class HelloWorld(Resource):
     def get(self):
-        return {'hello': "omg"}
+        return frequency
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(HelloWorld, '<frequency>')
 # api.add_resource(HelloWorld, '/<frequency>')
 
 # @app.route("/")
