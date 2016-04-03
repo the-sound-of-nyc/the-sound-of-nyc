@@ -5,7 +5,22 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    return render_template("index.html")
 
+@app.route('/frequency/<f>')
+def frequency(f):
+    return render_template("index.html")
+
+@app.route('/genre/<g>')
+def frequency(g):
+    return render_template("index.html")
+
+@app.route('/person/<p>')
+def frequency(p):
+    return render_template("index.html")
+
+@app.route('/music/<m>')
+def frequency(m):
     return render_template("index.html")
 
 ## Checks the username and password with the utils function auth()
