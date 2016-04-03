@@ -12,15 +12,15 @@ def frequency(frequency):
     return render_template("index.html",input=frequency)
 
 @app.route('/genre/<genre>')
-def frequency(genre):
+def genre(genre):
     return render_template("index.html", input=genre)
 
 @app.route('/person/<person>')
-def frequency(person):
+def person(person):
     return render_template("index.html", input=person)
 
 @app.route('/music/<music>')
-def frequency(music):
+def music(music):
     return render_template("index.html", input=music)
 
 ## Checks the username and password with the utils function auth()
