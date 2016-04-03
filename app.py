@@ -17,7 +17,6 @@ class Frequency(Resource):
 
 
 api.add_resource(Frequency, '/<user_id>')
-
 if __name__ == "__main__":
     app.debug = True
     # app.secret_key = "asdfghjkl"
