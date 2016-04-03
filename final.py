@@ -17,7 +17,7 @@ class Magic(Resource):
         users[user_id]['demographics'] = request.form['d']
         users[user_id]['sound_file'] = request.form['s']
 
-        return render_template("index.html", )#{user_id: users[user_id]}
+        return users#{user_id: users[user_id]}
 
 api.add_resource(Magic, '/<user_id>')
 
