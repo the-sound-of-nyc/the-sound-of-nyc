@@ -7,21 +7,21 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/frequency/<f>')
-def frequency(f):
-    return render_template("index.html",input=f)
+@app.route('/frequency/<frequency>')
+def frequency(frequency):
+    return render_template("index.html",input=frequency)
 
-@app.route('/genre/<g>')
-def frequency(g):
-    return render_template("index.html", input=g)
+@app.route('/genre/<genre>')
+def frequency(genre):
+    return render_template("index.html", input=genre)
 
-@app.route('/person/<p>')
-def frequency(p):
-    return render_template("index.html", input=p)
+@app.route('/person/<person>')
+def frequency(person):
+    return render_template("index.html", input=person)
 
-@app.route('/music/<m>')
-def frequency(m):
-    return render_template("index.html", input=m)
+@app.route('/music/<music>')
+def frequency(music):
+    return render_template("index.html", input=music)
 
 ## Checks the username and password with the utils function auth()
 @app.route('/login', methods=['GET','POST'])
