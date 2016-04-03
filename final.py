@@ -5,7 +5,7 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-users = {}
+#users = {}
 
 # class Magic(Resource):
 #     def get(self, user_id):
@@ -33,6 +33,7 @@ class Frequency(Resource):
     def put(self, user_id):
         hello[user_id] = request.form['freq']
         return {user_id: hello[user_id]}
+
 class Genre(Resource):
     def get(self, user_id):
         return {user_id: hello[user_id]}
@@ -40,6 +41,7 @@ class Genre(Resource):
     def put(self, user_id):
         hello[user_id] = request.form['genre']
         return {user_id: hello[user_id]}
+
 class People(Resource):
     def get(self, user_id):
         return {user_id: hello[user_id]}
@@ -47,6 +49,7 @@ class People(Resource):
     def put(self, user_id):
         hello[user_id] = request.form['people']
         return {user_id: hello[user_id]}
+
 class Sound(Resource):
     def get(self, user_id):
         return {user_id: hello[user_id]}
@@ -54,6 +57,7 @@ class Sound(Resource):
     def put(self, user_id):
         hello[user_id] = request.form['sound']
         return {user_id: hello[user_id]}
+        
 api.add_resource(Frequency, '/<user_id>')
 api.add_resource(Genre, '/<user_id>')
 api.add_resource(People, '/<user_id>')
