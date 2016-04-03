@@ -9,19 +9,19 @@ def home():
 
 @app.route('/frequency/<f>')
 def frequency(f):
-    return render_template("index.html")
+    return render_template("index.html",input=f)
 
 @app.route('/genre/<g>')
 def frequency(g):
-    return render_template("index.html")
+    return render_template("index.html", input=g)
 
 @app.route('/person/<p>')
 def frequency(p):
-    return render_template("index.html")
+    return render_template("index.html", input=p)
 
 @app.route('/music/<m>')
 def frequency(m):
-    return render_template("index.html")
+    return render_template("index.html", input=m)
 
 ## Checks the username and password with the utils function auth()
 @app.route('/login', methods=['GET','POST'])
