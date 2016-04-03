@@ -15,16 +15,8 @@ class Frequency(Resource):
         hello[user_id] = request.form['data']
         return {user_id: hello[user_id]}
 
-# class Genre(Resource):
-#     def get(self, user_id):
-#         return {user_id: hello[user_id]}
-#
-#     def put(self, user_id):
-#         hello[user_id] = request.form['genre']
-#         return {user_id: hello[user_id]}
 
 api.add_resource(Frequency, '/<user_id>')
-# api.add_resource(Genre, '/<user_id>')
 # api.add_resource(HelloWorld, '/<frequency>')
 
 # @app.route("/")
@@ -34,18 +26,18 @@ api.add_resource(Frequency, '/<user_id>')
 # @app.route('/frequency/<int:frequency>')
 # def frequency(frequency):
 #     return render_template("index.html",input=frequency)
-#
-# @app.route('/genre/<genre>')
-# def genre(genre):
-#     return render_template("index.html", input=genre)
-#
-# @app.route('/person/<person>')
-# def person(person):
-#     return render_template("index.html", input=person)
-#
-# @app.route('/music/<music>')
-# def music(music):
-#     return render_template("index.html", input=music)
+
+@app.route('/genre/<genre>')
+def genre(genre):
+    return render_template("index.html", input=genre)
+
+@app.route('/person/<person>')
+def person(person):
+    return render_template("index.html", input=person)
+
+@app.route('/music/<music>')
+def music(music):
+    return render_template("index.html", input=music)
 
 ## Checks the username and password with the utils function auth()
 @app.route('/login', methods=['GET','POST'])
