@@ -18,6 +18,12 @@ def abort_if_todo_doesnt_exist(todo_id):
 parser = reqparse.RequestParser()
 parser.add_argument('task')
 
+class frequency(Resource):
+    def get(self, frequency):
+        super(frequency, self).__init__()
+        self.arg = arg
+
+
 
 # Todo
 # shows a single todo item and lets you delete a todo item
@@ -56,6 +62,7 @@ class TodoList(Resource):
 ##
 api.add_resource(TodoList, '/todos')
 api.add_resource(Todo, '/todos/<todo_id>')
+api.add_resource(frequency, '/frequency/<frequency>')
 
 
 if __name__ == '__main__':

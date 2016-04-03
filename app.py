@@ -5,19 +5,19 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-class HelloWorld(Resource):
+class Frequency(Resource):
     def get(self):
-        return {'hello': 'world'}
+        return {'frequency': frequency}
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(HelloWorld, '/frequency/<int:frequency>')
 
 # @app.route("/")
 # def home():
 #     return render_template("index.html")
 
-@app.route('/frequency/<int:frequency>')
-def frequency(frequency):
-    return render_template("index.html",input=frequency)
+# @app.route('/frequency/<int:frequency>')
+# def frequency(frequency):
+#     return render_template("index.html",input=frequency)
 
 @app.route('/genre/<genre>')
 def genre(genre):
