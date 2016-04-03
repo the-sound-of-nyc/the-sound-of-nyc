@@ -12,7 +12,7 @@ class Frequency(Resource):
         return {user_id: hello[user_id]}
 
     def put(self, user_id):
-        hello[user_id] = request.form['freq']
+        hello[user_id] = request.form['data']
         return {user_id: hello[user_id]}
 
 # class Genre(Resource):
