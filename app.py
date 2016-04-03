@@ -5,13 +5,22 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-frequencies = {}
-
 class HelloWorld(Resource):
     def get(self):
         return {'frequency' : str(frequency)}
 
-api.add_resource(HelloWorld, '/<frequency>')
+hello = {}
+
+class Frequency(Resource):
+    def get(self, user_id):
+        return {user_id: hello[user_id]}
+
+    def put(self, user_id):
+        hello[user_id] = request.form['data']
+        return {user_id: hello[user_id]}
+
+
+api.add_resource(Frequency, '/<user_id>')
 # api.add_resource(HelloWorld, '/<frequency>')
 
 # @app.route("/")
