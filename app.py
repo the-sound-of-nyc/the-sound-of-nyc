@@ -5,9 +5,11 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
+frequencies = {}
+
 class HelloWorld(Resource):
     def get(self):
-        return frequency
+        return {'frequency' : str(frequency)}
 
 api.add_resource(HelloWorld, '/<frequency>')
 # api.add_resource(HelloWorld, '/<frequency>')
