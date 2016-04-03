@@ -9,7 +9,7 @@ class Frequency(Resource):
     def get(self):
         return {'frequency': frequency}
 
-api.add_resource(HelloWorld, '/frequency/<int:frequency>')
+api.add_resource(Frequency, '/frequency/<int:frequency>')
 
 # @app.route("/")
 # def home():
