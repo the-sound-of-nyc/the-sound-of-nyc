@@ -15,16 +15,16 @@ class Frequency(Resource):
         hello[user_id] = request.form['freq']
         return {user_id: hello[user_id]}
 
-class Genre(Resource):
-    def get(self, user_id):
-        return {user_id: hello[user_id]}
-
-    def put(self, user_id):
-        hello[user_id] = request.form['genre']
-        return {user_id: hello[user_id]}
+# class Genre(Resource):
+#     def get(self, user_id):
+#         return {user_id: hello[user_id]}
+#
+#     def put(self, user_id):
+#         hello[user_id] = request.form['genre']
+#         return {user_id: hello[user_id]}
 
 api.add_resource(Frequency, '/<user_id>')
-api.add_resource(Genre, '/<user_id>')
+# api.add_resource(Genre, '/<user_id>')
 # api.add_resource(HelloWorld, '/<frequency>')
 
 # @app.route("/")
