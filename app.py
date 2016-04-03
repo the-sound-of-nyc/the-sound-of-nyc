@@ -9,6 +9,7 @@ class HelloWorld(Resource):
     def get(self):
         return {'hello': "world"}
 
+api.add_resource(HelloWorld, '/')
 api.add_resource(HelloWorld, '/<frequency>')
 
 # @app.route("/")
